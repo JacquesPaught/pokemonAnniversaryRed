@@ -6,8 +6,8 @@ _OakSpeechText2C::
 	prompt
 
 _IntroducePlayerGender::
-	text "Are you a boy? Or"
-	line "are you a girl?"
+	text "Are you a boy?"
+	line "Or are you a girl?"
 	done
 
 _IntroducePlayerName::
@@ -17,49 +17,48 @@ _IntroducePlayerName::
 	prompt
 	
 _ConfirmBoyText::
-	text "So, you are a"
-	line "boy. Right?"
+	text "You are a boy."
+	line "Is that correct?"
 	done
 
 _ConfirmGirlText::
-	text "So, you are a"
-	line "girl. Right?"
+	text "You are a girl."
+	line "Is that correct?"
 	done
 
 _AreYouREALLYSureText::
-	text "Are you really"
-	line "sure?"
+	text "Are you absolutely"
+	line "sure about that?"
 	done
 
 _EvoInstructionText::
-	text "A button: Evolve"
-	line "B button: Cancel"
+	text "A button: EVOLVE"
+	line "B button: CANCEL"
 	done
 	
 _Red3dots:
-	text "start9"
+	text "... ..."
 	prompt
 	
 _Red12dots:
-	text "…"
-	line "…"
+	text "... ..."
 	done
 
 _LegendaryRanText::
 	text "Wild @"
 	TX_RAM wEnemyMonNick
 	db $0
-	line "ran away!"
+	line "escaped!"
 	prompt
 	
 _ItWasJustADreamText::
-	text "Was it just"
-	line "a dream…?"
+	text "Was it only"
+	line "a dream...?"
 	prompt
 
 _MtSilverIntroText::
 	text "Later that"
-	line "night…"
+	line "night..."
 	prompt
 	
 _OakPreBattleText::
@@ -120,12 +119,12 @@ _SailorIslandText::
 	done
 	
 _SailorIslandText2::
-	text "Ok, let's go."
+	text "OK, let's go!"
 	done
 
 _SailorIslandText3::
 	text "Well, hurry up,"
-	line "ok?"
+	line "alright?"
 	
 	para "I don't know if"
 	line "that thing will"
@@ -133,7 +132,7 @@ _SailorIslandText3::
 	done
 	
 _SailorIslandText4::
-	text "Want to go"
+	text "You want to go"
 	line "back?"
 	done
 	
@@ -158,20 +157,26 @@ RematchPrompt::
 INCLUDE "151hack/btlibs.asm"
 
 _EndRematchBattle_Brock::
-	text "I took"
-	line "you for granted."
+	text "Your #-"
+	line "MON's powerful at-"
+	cont "tacks overcame my"
+	cont "rock-hard defense!"
+
+	para "You're stronger"
+	line "than I expected!"
 	prompt
 	
 _EndRematchBattle_Misty::
-	text "Wow!"
-	line "You're too much!"
+	text "You really"
+	line "are good..."
+
+	para "I'll admit that"
+	line "you are skilled!"
 	prompt
 	
 _EndRematchBattle_LtSurge::
-	text "Whoa!"
-
-	para "You're the real"
-	line "deal, kid!"
+	text "Arrrgh!"
+	line "You are strong!"
 	prompt
 	
 _EndRematchBattle_Erika::
@@ -179,82 +184,63 @@ _EndRematchBattle_Erika::
 	line "I concede defeat."
 
 	para "You are remarkably"
-	line "strong."
+	line "strong!"
 	prompt
 	
 _EndRematchBattle_Sabrina::
-	text "I'm"
-	line "shocked!"
-	cont "But, a loss is a"
-	cont "loss."
+	text "Your"
+	line "power..."
 
-	para "I admit I didn't"
-	line "work hard enough"
-	cont "to win!"
+	para "It far exceeds"
+	line "what I foresaw!"
+
+	para "Maybe it isn't"
+	line "possible to fully"
+
+	para "predict what the"
+	line "future holds..."
 	prompt
 
 _EndRematchBattle_Blaine::
-	text "I have"
-	line "burnt out!"
+	text "Awesome."
+	line "I've burned out!"
 	prompt
 	
 _EndRematchBattle_LeaguePC::
 	text ""
-	line "BATTLE.EXE -T"
-	para "WELL DONE."
+	line "... ..."
 	prompt
 	
 _LeaguePCBeforeText::
-	text "WELCOME TO GYM"
-	line "NO. 8."
+	text $52, " turned on"
+	line "the PC."
 	
-	para "I AM A COMPUTER"
-	line "INSTALLED BY"
-	cont "BLAINE TO ALLOW"
-	cont "TRAINERS TO STILL"
-	cont "GET THEIR 8TH"
-	cont "BADGES WHILE"
-	cont "THE LEAGUE LOOKS"
-	cont "FOR A NEW GYM"
-	cont "LEADER."
+	para "Accessed #MON"
+	line "LEAGUE's PC."
+
+	para "..."
+	line "..."
 	
-	para "MY SIMULATED TEAM"
-	line "CONSISTS OF AN"
-	cont "OPTIMAL VERSION"
-	cont "OF THE PREVIOUS"
-	cont "LEADER'S TEAM."
+	para "BATTLE SIM is"
+	line "displayed on the"
+	cont "PC monitor."
 	
-	para "IT SEEMS YOU WOULD"
-	line "LIKE A REMATCH."
-	
-	para "SHALL I INITIATE"
-	line "BATTLE.EXE?"
+	para "Rematch GIOVANNI?"
 	done
 	
 _LeaguePCYesText::
-	text "BATTLE.EXE -D"
-	line "GYM8LEADER.DAT"
+	text "OK, please wait"
+	line "just a moment."
 	done
 	
 _LeaguePCNoText::
-	text "CANCEL.EXE"
+	text "The battle was"
+	line "canceled."
 	done
 	
 _LeaguePCAfterText::
-	text "THAT WAS AN"
-	line "OPTIMAL BATTLE"
-	cont "INDEED."
-	
-	para "THIS UNIT MUST"
-	line "GO INTO SLEEP"
-	cont "MODE."
-	
-	para "I WISH YOU"
-	line "PROSPERITY IN"
-	cont "COMPLETING YOUR"
-	cont "END GOAL."
-	
-	para "LOGOFF.EXE"
+	text "There isn't any"
+	line "response..."
 	done
 	
 _HallofFameRoomText1_tehurn::
